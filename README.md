@@ -10,10 +10,27 @@ Run the first reference-boundary tiling demo with:
 uv run must-footprint-demo
 ```
 
-This reads `reference/desi1b-20240520-boundaries.ecsv` and writes:
+This reads `reference/desi1b-20240520-boundaries.ecsv`, generates three observing passes by default, and writes:
 
 - `outputs/reference_tiling.png`
 - `outputs/reference_tiles.csv`
+- `outputs/reference_multipass_coverage.png`
+
+Use `--passes 1` to reproduce a single-pass tiling table and figure.
+
+For a funding-review style walkthrough with detailed terminal explanation, run:
+
+```bash
+uv run python scripts/run_review_demo.py
+```
+
+Build the review PDF with:
+
+```bash
+uv run python scripts/build_review_pdf.py
+```
+
+The source document is `docs/review.md`, and the generated PDF is `docs/review.pdf`.
 
 ## Optional Dependencies
 
