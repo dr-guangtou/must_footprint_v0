@@ -206,6 +206,9 @@ tempCodeRunnerFile.py
 # Ruff stuff:
 .ruff_cache/
 
+# Generated demo outputs
+outputs/
+
 # PyPI configuration file
 .pypirc
 

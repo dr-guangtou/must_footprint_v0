@@ -1,2 +1,34 @@
 # must_footprint_v0
-Preliminary script to design MUST survey's footprint.
+
+Preliminary package for designing the MUST survey footprint and focal-plane tiling strategy.
+
+## Demo
+
+Run the first reference-boundary tiling demo with:
+
+```bash
+uv run must-footprint-demo
+```
+
+This reads `reference/desi1b-20240520-boundaries.ecsv` and writes:
+
+- `outputs/reference_tiling.png`
+- `outputs/reference_tiles.csv`
+
+## Optional Dependencies
+
+The default install is intentionally small and supports the current demo.
+
+Use these extras when a feature needs them:
+
+```bash
+uv sync --extra astro
+uv sync --extra background-map
+uv sync --extra fits-density
+uv sync --extra skygrid
+```
+
+- `astro`: `astropy` and `shapely` for coordinate transforms, ECSV I/O, and real polygon operations.
+- `background-map`: `reproject` and `scipy` for the optional Gaia Milky Way stellar-density image.
+- `fits-density`: `fitsio` and `healpy` for the older commented FITS stellar-density path.
+- `skygrid`: `m4opt` for geodesic sky-grid tiling. This works, but it is much heavier than the other extras.
